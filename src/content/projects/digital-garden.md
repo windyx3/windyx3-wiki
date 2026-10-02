@@ -5,7 +5,7 @@ date: 2026-10-01
 tags: [Astro, TypeScript, Personal website]
 category: Web
 status: In progress
-repo: https://github.com/windyx3/windyx3
+repo: https://github.com/windyx3/windyx3-wiki
 ---
 
 ## A personal corner of the internet
@@ -23,3 +23,4 @@ This website is a long-term home for learning notes, technical writing, personal
 ## Room to grow
 
 As personal content is added, the categories can be refined, project stories expanded, and favorites updated. Most maintenance is simply writing.
+

@@ -41,7 +41,7 @@ Edit your identity and current activities in `src/site.config.ts`, favorites in 
 
 ## Deploy to Cloudflare Pages
 
-1. In the Cloudflare dashboard, open Workers & Pages, create a Pages project, and connect the GitHub repository `windyx3/windyx3`.
+1. In the Cloudflare dashboard, open Workers & Pages, create a Pages project, and connect the GitHub repository `windyx3/windyx3-wiki`.
 2. Use production branch `main`, build command `npm run build`, output directory `dist`, and the repository root as the root directory.
 3. Set the environment variable `NODE_VERSION=24`.
 4. Set `SITE_URL` to the actual HTTPS address, for example `https://windyx3.pages.dev`. If that project name is taken, use the domain Cloudflare assigns.
@@ -64,3 +64,4 @@ Layouts live in `src/layouts/`, components in `src/components/`, and styles in `
 ## Verification
 
 `npm run check` validates Astro and TypeScript. `npm run build` generates the complete static website. GitHub Actions runs both checks on pushes to `main` and pull requests.
+
