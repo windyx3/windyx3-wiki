@@ -4,4 +4,4 @@ import ContentList from '../../components/ContentList.astro';
 import { entries } from '../../lib/content';
 const projects = await entries('projects');
 ---
-<BaseLayout title="项目" description="windyx3 的个人项目与构建记录。"><div class="shell index-page"><header class="page-heading"><span class="eyebrow">MADE WITH CURIOSITY</span><h1>把想法做出来<span class="heading-dot">.</span></h1><p>从一个小问题出发，做一点有意思的东西。<br />记录构建过程，也记录过程中的取舍。</p></header><div class="list-label"><span>项目记录</span><span>{projects.length} 个项目</span></div><ContentList items={projects} /></div></BaseLayout>
+<BaseLayout title="Projects" description="Personal projects and build notes by windyx3."><div class="shell index-page"><header class="page-heading"><span class="eyebrow">MADE WITH CURIOSITY</span><h1>Making ideas real<span class="heading-dot">.</span></h1><p>Start with a small question. Make something interesting.<br />A record of the process and the decisions along the way.</p></header><div class="list-label"><span>Projects & build notes</span><span>{projects.length} projects</span></div><ContentList items={projects} /></div></BaseLayout>

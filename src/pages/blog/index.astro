@@ -4,4 +4,4 @@ import ContentList from '../../components/ContentList.astro';
 import { entries } from '../../lib/content';
 const posts = await entries('blog');
 ---
-<BaseLayout title="随笔" description="技术文章、个人思考与日常分享。"><div class="shell index-page"><header class="page-heading"><span class="eyebrow">THOUGHTS ALONG THE WAY</span><h1>沿途的想法<span class="heading-dot">.</span></h1><p>写代码时的发现，学习时的困惑，生活里偶尔闪过的念头。<br />写下来，也是一种理解世界的方式。</p></header><div class="list-label"><span>全部随笔</span><span>{posts.length} 篇记录</span></div><ContentList items={posts} /></div></BaseLayout>
+<BaseLayout title="Blog" description="Technical writing, personal reflections, and everyday discoveries."><div class="shell index-page"><header class="page-heading"><span class="eyebrow">THOUGHTS ALONG THE WAY</span><h1>Thoughts along the way<span class="heading-dot">.</span></h1><p>Discoveries while coding, questions while learning, and passing thoughts.<br />Writing is another way to make sense of things.</p></header><div class="list-label"><span>All posts</span><span>{posts.length} entries</span></div><ContentList items={posts} /></div></BaseLayout>

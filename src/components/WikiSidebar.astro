@@ -3,7 +3,7 @@ import { entries, entryUrl } from '../lib/content';
 const notes = await entries('notes');
 const groups = [...new Set(notes.map(note => note.data.category))];
 ---
-<aside class="wiki-sidebar"><details open><summary>浏览笔记 <span aria-hidden="true">⌄</span></summary><nav aria-label="笔记目录"><a class="wiki-overview" href="/notes/">全部笔记 ↗</a>{groups.map(group => <div class="wiki-group"><h2>{group}</h2>{notes.filter(note => note.data.category === group).map(note => <a href={entryUrl(note)} aria-current={Astro.url.pathname === entryUrl(note) ? 'page' : undefined}>{note.data.title}</a>)}</div>)}</nav></details><p class="sidebar-foot">知识没有终点，<br />笔记也不必一次写完。</p></aside>
+<aside class="wiki-sidebar"><details open><summary>Browse notes <span aria-hidden="true">⌄</span></summary><nav aria-label="Notes directory"><a class="wiki-overview" href="/notes/">All notes ↗</a>{groups.map(group => <div class="wiki-group"><h2>{group}</h2>{notes.filter(note => note.data.category === group).map(note => <a href={entryUrl(note)} aria-current={Astro.url.pathname === entryUrl(note) ? 'page' : undefined}>{note.data.title}</a>)}</div>)}</nav></details><p class="sidebar-foot">Learning has no finish line.<br />Notes can grow along the way.</p></aside>
 <script>
   const directory = document.querySelector<HTMLDetailsElement>('.wiki-sidebar details');
   const mobile = window.matchMedia('(max-width: 760px)');

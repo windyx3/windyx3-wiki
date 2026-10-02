@@ -1,29 +1,29 @@
 ---
-title: 给想法一个慢慢生长的地方
-description: 关于个人网站、持续记录，以及不必一次完成的想法。
+title: Give ideas a place to grow
+description: On personal websites, keeping a record, and ideas that do not have to be finished all at once.
 date: 2026-10-01
-tags: [数字花园, 个人思考]
-category: 个人思考
+tags: [Digital garden, Reflections]
+category: Reflections
 sample: true
 ---
 
-## 从记录开始
+## Begin with a record
 
-一个个人网站可以很小：几篇笔记，一些链接，一段还没有想清楚的文字。
+A personal website can start small: a few notes, a collection of links, and a thought that is still taking shape.
 
-它的意义在于，学习过的东西和做过的尝试有了一个可以再次找到的地方。
+It gives the things you learn and the experiments you try a place you can find again.
 
-## 给未完成留一点空间
+## Leave room for unfinished thoughts
 
-发布一篇完整文章往往需要组织和打磨。笔记则可以轻一点，只要写清楚一个问题、一种方法，或一次新的理解。
+A finished article takes structure and revision. A note can be lighter: a question, a method, or a new understanding.
 
-这也是把 Blog 和 Wiki 分开的原因：
+That is why this space has both a blog and a wiki:
 
-- **Blog** 保存某一时刻的想法。
-- **Wiki** 保存持续更新的理解。
+- **Blog posts** preserve a thought at a particular moment.
+- **Wiki notes** hold understanding that keeps evolving.
 
-## 慢一点也没关系
+## It is okay to grow slowly
 
-> 先记录，再连接。一个小小的开始，也能慢慢长成花园。
+> Record first. Connect later. A small beginning can grow into a garden.
 
-下次遇到值得留下的东西时，就从一篇 Markdown 开始。
+The next time you find something worth keeping, start with a Markdown file.

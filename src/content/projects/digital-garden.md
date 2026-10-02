@@ -1,25 +1,25 @@
 ---
-title: windyx3 的数字花园
-description: 一个使用 Astro 和 Markdown 构建的个人分享网站。
+title: The windyx3 digital garden
+description: A personal sharing space built with Astro and Markdown.
 date: 2026-10-01
-tags: [Astro, TypeScript, 个人网站]
+tags: [Astro, TypeScript, Personal website]
 category: Web
-status: 进行中
+status: In progress
 repo: https://github.com/windyx3/windyx3
 ---
 
-## 做一个自己的互联网空间
+## A personal corner of the internet
 
-这个网站用来长期记录学习笔记、技术文章、个人思考、项目和兴趣收藏。
+This website is a long-term home for learning notes, technical writing, personal reflections, projects, and favorites.
 
-## 实现方式
+## How it works
 
-- 使用 Astro 生成静态页面。
-- 使用 Markdown / MDX 保存内容。
-- 使用 TypeScript 校验内容元数据。
-- 用主题目录和标签连接内容。
-- 支持深色模式、RSS 和 Sitemap。
+- Astro generates static pages.
+- Markdown and MDX store the content.
+- TypeScript validates content metadata.
+- A topic directory and tags connect entries.
+- Dark mode, RSS, and a sitemap support the reading experience.
 
-## 后续可以继续做的事
+## Room to grow
 
-随着真实内容增加，逐步整理分类、补充项目过程与更新收藏。日常维护以写内容为主。
+As personal content is added, the categories can be refined, project stories expanded, and favorites updated. Most maintenance is simply writing.

@@ -1,33 +1,33 @@
 ---
-title: 为什么个人网站可以简单一点
-description: 内容放在 Markdown，构建时生成页面，把维护成本留在可控的范围内。
+title: A personal website can stay simple
+description: Keep content in Markdown, generate pages at build time, and make maintenance manageable.
 date: 2026-09-28
-tags: [Astro, 编程, 个人网站]
-category: 技术随笔
+tags: [Astro, Programming, Personal website]
+category: Technical writing
 sample: true
 ---
 
-## 从需要的功能出发
+## Start with the actual needs
 
-个人分享网站主要是阅读内容。写作可以发生在编辑器里，版本记录交给 Git，公开页面在构建时生成。
+A personal sharing website is mostly a place to read. Writing can happen in an editor, Git can track changes, and public pages can be generated at build time.
 
-这样一来，网站的主要维护工作就是整理内容与检查链接。
+The main work becomes organizing content and checking that its connections still make sense.
 
-## 内容就是文件
+## Content is a collection of files
 
 ```text
-写 Markdown → Git 提交 → 构建静态页面 → 发布
+Write Markdown → Commit with Git → Build static pages → Publish
 ```
 
-每篇内容可以附带标题、日期、标签等元数据。网站根据这些信息生成列表、标签页和订阅源。
+Each entry can carry a title, date, and tags. Those details are enough to generate lists, tag pages, and a subscription feed.
 
-## 把复杂度用在值得的地方
+## Spend complexity where it helps
 
-对这个网站来说，值得投入的是阅读体验：
+For this website, reading is worth the effort:
 
-1. 在手机上也能舒服地阅读。
-2. 代码和表格不会挤坏布局。
-3. 内容可以按主题与标签找到。
-4. 新增文章时，首页、RSS 和 Sitemap 自动更新。
+1. Pages should feel comfortable on a phone.
+2. Code and tables should fit without breaking the layout.
+3. Topics and tags should make entries easy to find.
+4. New writing should automatically appear on the home page, in RSS, and in the sitemap.
 
-相关：[TypeScript 笔记](/notes/programming/typescript/)
+Related: [Describe your ideas with types](/notes/programming/typescript/)

@@ -8,4 +8,4 @@ export async function getStaticPaths() {
 }
 const { tag, items } = Astro.props;
 ---
-<BaseLayout title={`标签：${tag}`}><div class="shell index-page"><header class="page-heading"><a class="back-link" href="/tags/">← 全部标签</a><h1>#{tag}<span class="heading-dot">.</span></h1><p>{items.length} 篇相关记录</p></header><ContentList items={items} /></div></BaseLayout>
+<BaseLayout title={`Tag: ${tag}`}><div class="shell index-page"><header class="page-heading"><a class="back-link" href="/tags/">← All tags</a><h1>#{tag}<span class="heading-dot">.</span></h1><p>{items.length} related entries</p></header><ContentList items={items} /></div></BaseLayout>
