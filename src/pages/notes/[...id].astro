@@ -1,0 +1,9 @@
+---
+import { render } from 'astro:content';
+import { entries } from '../../lib/content';
+import ContentLayout from '../../layouts/ContentLayout.astro';
+export async function getStaticPaths() { return (await entries('notes')).map(entry => ({ params: { id: entry.id }, props: { entry } })); }
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+---
+<ContentLayout entry={entry} headings={headings}><Content /></ContentLayout>

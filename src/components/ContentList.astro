@@ -1,0 +1,9 @@
+---
+import { type Entry, entryUrl, dateLabel, tagUrl } from '../lib/content';
+interface Props { items: Entry[]; compact?: boolean }
+const { items, compact = false } = Astro.props;
+---
+<ul class:list={['content-list', { compact }]}>{items.map(entry => <li>
+  <a class="content-link" href={entryUrl(entry)}><div><div class="entry-eyebrow">{entry.data.category}{entry.data.status && <span class="status">{entry.data.status}</span>}</div><h3>{entry.data.title} <span class="link-arrow" aria-hidden="true">↗</span></h3><p>{entry.data.description}</p></div><time datetime={entry.data.date.toISOString()}>{dateLabel(entry.data.date)}</time></a>
+  {!compact && <div class="tag-row">{entry.data.tags.map(tag => <a class="tag" href={tagUrl(tag)}>#{tag}</a>)}{entry.data.sample && <span class="sample-label">示例内容</span>}</div>}
+</li>)}</ul>

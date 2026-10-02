@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { interests } from '../data/interests';
+---
+<BaseLayout title="兴趣与收藏" description="工具、书籍、网站和生活里的小发现。"><div class="shell index-page"><header class="page-heading"><span class="eyebrow">A CABINET OF CURIOSITIES</span><h1>值得留下的东西<span class="heading-dot">.</span></h1><p>好用的工具、想读的书，以及互联网漫游时发现的小角落。</p></header><p class="sample-notice">以下是初始示例收藏，可在 src/data/interests.ts 中替换为你的个人清单。</p>{interests.map(group => <section class="favorite-group" id={group.id}><div class="section-heading"><h2>{group.title}</h2><span class="muted">{group.subtitle}</span></div><ul>{group.items.map(item => <li><div>{item.url ? <a href={item.url}>{item.name} ↗</a> : <h3>{item.name}</h3>}<p>{item.description}</p></div></li>)}</ul></section>)}</div></BaseLayout>

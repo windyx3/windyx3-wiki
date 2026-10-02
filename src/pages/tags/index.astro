@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { allEntries, tagUrl } from '../../lib/content';
+const content = await allEntries();
+const tags = [...new Set(content.flatMap(entry => entry.data.tags))].sort((a, b) => a.localeCompare(b, 'zh-CN'));
+---
+<BaseLayout title="标签"><div class="shell index-page"><header class="page-heading"><span class="eyebrow">CONNECT THE DOTS</span><h1>循着标签探索<span class="heading-dot">.</span></h1><p>不同的笔记和想法，有时会在同一个地方交汇。</p></header><div class="tag-cloud">{tags.map(tag => <a href={tagUrl(tag)}>#{tag}<span>{content.filter(entry => entry.data.tags.includes(tag)).length}</span></a>)}</div></div></BaseLayout>
