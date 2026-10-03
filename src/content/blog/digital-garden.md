@@ -5,6 +5,7 @@ date: 2026-10-01
 tags: [Digital garden, Reflections]
 category: Reflections
 sample: true
+draft: true
 ---
 
 ## Begin with a record

@@ -5,6 +5,7 @@ date: 2026-10-01
 tags: [TypeScript, Programming]
 category: Programming
 sample: true
+draft: true
 ---
 
 ## Types are a contract

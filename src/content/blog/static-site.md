@@ -5,6 +5,7 @@ date: 2026-09-28
 tags: [Astro, Programming, Personal website]
 category: Technical writing
 sample: true
+draft: true
 ---
 
 ## Start with the actual needs
