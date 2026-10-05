@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../../lib/url';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ContentList from '../../components/ContentList.astro';
 import { allEntries } from '../../lib/content';
@@ -8,4 +9,4 @@ export async function getStaticPaths() {
 }
 const { tag, items } = Astro.props;
 ---
-<BaseLayout title={`Tag: ${tag}`}><div class="shell index-page"><header class="page-heading"><a class="back-link" href="/tags/">← All tags</a><h1>#{tag}<span class="heading-dot">.</span></h1><p>{items.length} related entries</p></header><ContentList items={items} /></div></BaseLayout>
+<BaseLayout title={`Tag: ${tag}`}><div class="shell index-page"><header class="page-heading"><a class="back-link" href={withBase('/tags/')}>← All tags</a><h1>#{tag}<span class="heading-dot">.</span></h1><p>{items.length} related entries</p></header><ContentList items={items} /></div></BaseLayout>

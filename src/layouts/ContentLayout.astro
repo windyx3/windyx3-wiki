@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../lib/url';
 import BaseLayout from './BaseLayout.astro';
 import WikiSidebar from '../components/WikiSidebar.astro';
 import { type Entry, entryUrl, dateLabel, tagUrl, entries, sectionNames } from '../lib/content';
@@ -15,7 +16,7 @@ const next = siblings[index + 1];
   <div class:list={['shell', 'article-grid', { wiki }]}>
     {wiki && <WikiSidebar />}
     <article class="article-body">
-      <a class="back-link" href={`/${entry.collection}/`}>← {sectionNames[entry.collection]}</a>
+      <a class="back-link" href={withBase(`/${entry.collection}/`)}>← {sectionNames[entry.collection]}</a>
       <header class="article-header"><span class="eyebrow">{entry.data.category} / {entry.data.status || 'GROWING THOUGHTS'}</span><h1>{entry.data.title}</h1><p class="article-description">{entry.data.description}</p><div class="article-meta"><span>windyx3</span><time datetime={entry.data.date.toISOString()}>{dateLabel(entry.data.date)}</time>{entry.data.updated && <span>Updated {dateLabel(entry.data.updated)}</span>}</div><div class="tag-row">{entry.data.tags.map(tag => <a class="tag" href={tagUrl(tag)}>#{tag}</a>)}</div></header>
       {entry.data.sample && <p class="sample-notice">This sample shows the reading layout and content structure. Replace it with your own notes when you are ready.</p>}
       {(entry.data.repo || entry.data.demo) && <div class="project-links">{entry.data.repo && <a class="text-link" href={entry.data.repo}>View source ↗</a>}{entry.data.demo && <a class="text-link" href={entry.data.demo}>Visit project ↗</a>}</div>}

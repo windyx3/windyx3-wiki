@@ -39,7 +39,26 @@ Projects can also include `status` (In progress, Complete, or Exploring), `repo`
 
 Edit your identity and current activities in `src/site.config.ts`, favorites in `src/data/interests.ts`, and the introduction in `src/pages/about.astro`.
 
-## Deploy to Cloudflare Pages
+## Deploy to GitHub Pages
+
+The current configuration uses `site: 'https://windyx3.github.io'` and
+`base: '/windyx3-wiki'`. The published address is
+`https://windyx3.github.io/windyx3-wiki/`.
+
+1. In the repository, open Settings → Pages and select **GitHub Actions** as the source.
+2. Commit and push to `main`. `.github/workflows/deploy.yml` builds and deploys the site.
+3. Check that the deployment succeeds in the Actions tab.
+
+Site-local links in Astro components should use `withBase()` from `src/lib/url.ts`.
+For example, `withBase('/notes/')` produces `/windyx3-wiki/notes/`. Fragment links
+such as `#main` and external URLs do not need a prefix. Within Markdown, use
+relative links or include the configured base in site-root links.
+
+## Alternative: Cloudflare Pages
+
+Before switching back, remove the GitHub Pages `base` setting and change `site`
+to the Cloudflare or custom domain. The `withBase()` helper also supports a site
+hosted at `/`.
 
 1. In the Cloudflare dashboard, open Workers & Pages, create a Pages project, and connect the GitHub repository `windyx3/windyx3-wiki`.
 2. Use production branch `main`, build command `npm run build`, output directory `dist`, and the repository root as the root directory.

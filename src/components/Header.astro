@@ -1,10 +1,11 @@
 ---
+import { withBase } from '../lib/url';
 import { site } from '../site.config';
 import ThemeToggle from './ThemeToggle.astro';
 const path = Astro.url.pathname;
 ---
 <header class="site-header shell">
-  <a class="brand" href="/" aria-label="windyx3 home"><span class="brand-mark" aria-hidden="true">w.</span><span>windyx3<span class="brand-suffix"> / garden</span></span></a>
-  <nav aria-label="Main navigation">{site.navigation.map(item => <a href={item.href} aria-current={path.startsWith(item.href) ? 'page' : undefined}>{item.label}</a>)}</nav>
+  <a class="brand" href={withBase('/')} aria-label="windyx3 home"><span class="brand-mark" aria-hidden="true">w.</span><span>windyx3<span class="brand-suffix"> / garden</span></span></a>
+  <nav aria-label="Main navigation">{site.navigation.map(item => <a href={withBase(item.href)} aria-current={path.startsWith(withBase(item.href)) ? 'page' : undefined}>{item.label}</a>)}</nav>
   <ThemeToggle />
 </header>

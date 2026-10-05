@@ -3,7 +3,8 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: process.env.SITE_URL || "https://windyx3.pages.dev",
+  site: 'https://windyx3.github.io',
+  base: '/windyx3-wiki',
   output: "static",
   integrations: [mdx(), sitemap()],
   markdown: {

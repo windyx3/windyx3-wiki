@@ -1,4 +1,5 @@
 ---
+import { withBase } from '../lib/url';
 import { site } from '../site.config';
 ---
-<footer class="site-footer shell"><div><span class="footer-dot" aria-hidden="true"></span>A personal space, growing slowly.<small>© {new Date().getUTCFullYear()} {site.name}</small></div><div class="footer-links"><a href="/tags/">Tags</a><a href="/rss.xml">RSS ↗</a><a href={site.github}>GitHub ↗</a></div></footer>
+<footer class="site-footer shell"><div><span class="footer-dot" aria-hidden="true"></span>A personal space, growing slowly.<small>© {new Date().getUTCFullYear()} {site.name}</small></div><div class="footer-links"><a href={withBase('/tags/')}>Tags</a><a href={withBase('/rss.xml')}>RSS ↗</a><a href={site.github}>GitHub ↗</a></div></footer>
